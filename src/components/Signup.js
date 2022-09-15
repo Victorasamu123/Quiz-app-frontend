@@ -27,7 +27,7 @@ const Signup = () => {
             <input type="password" placeholder="Enter password at least 8 character" id="password"/>
             </div>
             <div id="warning"></div>
-            <button class="sign-in-button" onclick="signUpPage()">sign up</button>
+            <button class="sign-in-button">sign up</button>
             <div class="confirmation">
                 Already have an account?<Link to="/signin">Log in</Link>
             </div>
