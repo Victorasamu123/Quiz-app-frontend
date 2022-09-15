@@ -8,3 +8,81 @@
     width: 50%;
     height: 100%;
 }
+.product-logo{
+    font-family:monospace;
+    font-size: 30px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 5px;
+}
+.logo-item{
+    color: rgb(189,45,34);
+    font-size: 50px;
+    font-weight: bolder;
+ }
+ .central-img{
+     margin-top: 30px;
+     margin-left: 100px;
+ }
+ .second-half-body{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+}
+h2{
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.fullname-input{
+    margin-left: 100px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+input{
+    width: 65%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(228, 222, 222);
+    border: 0;
+    padding-left: 20px;
+}
+.email-input{
+    margin-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 100px;
+    font-size: 20px;
+}
+.password-input{
+    margin-top: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 100px;
+    font-size: 20px;
+}.sign-in-button{
+    background-color: rgb(189,45,34);
+    color: white;
+    border: 0;
+    width: 25%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+.confirmation{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+a{
+    color: rgb(189,45,34);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(189,45,34);
+    text-decoration: underline;
+}
