@@ -1,0 +1,10 @@
+.section{
+    display: flex;
+    width: 100% !important;
+    height: 100vh !important;
+}
+.first-half-body{
+    background-color:rgb(28,29,61);
+    width: 50%;
+    height: 100%;
+}
