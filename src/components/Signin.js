@@ -25,7 +25,7 @@ const Signin = () => {
             <div id="warning"></div>
             <button class="sign-in-button" onclick="signUpPage()">sign in</button>
             <div class="confirmation">
-                Already have an account?<Link to="/" className='link'>signup</Link>
+                Do not have an account?<Link to="/" className='link'>signup</Link>
             </div>
         </div>
       </section>
