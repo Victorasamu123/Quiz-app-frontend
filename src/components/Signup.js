@@ -22,14 +22,14 @@ const Signup = () => {
       if(firstname==""){
         setfirstnameerror("please this field is required !!")
       }else if(!regexForFirstName.test(firstname)){
-        setfirstnameerror("firstname must be at least 3 character !!") 
+        setfirstnameerror("firstname must be at least 3 character and space is not allowed !!") 
       }else if(!firstname==""||regexForFirstName.test(firstname)){
         setfirstnameerror("")
       }
       if(lastname==""){
         setlastnameerror("please this field is required !!")
       }else if(!regexForLastName.test(lastname)){
-        setlastnameerror("lastname must be at least 3 character !!") 
+        setlastnameerror("lastname must be at least 3 character and space is not allowed !!") 
       }else if(!lastname==""||regexForLastName.test(firstname)){
         setlastnameerror("")
       }
