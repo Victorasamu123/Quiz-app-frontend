@@ -30,6 +30,8 @@ const Signin = () => {
       }
    }
     else{
+      setemailerror("")
+      setpassworderror("")
       alert("correct login")
     }
   }
