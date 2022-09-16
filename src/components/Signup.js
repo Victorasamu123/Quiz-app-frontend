@@ -13,10 +13,44 @@ const Signup = () => {
   const [emailerror, setemailerror] = useState("");
   const [passworderror, setpassworderror] = useState("");
   const signup =()=>{
-    let regexForFirstName=/^[\w]{2,}$/
-    let regexForLastName=/^[\w]{2,}$/
+    let regexForFirstName=/^[\w]{3,}$/
+    let regexForLastName=/^[\w]{3,}$/
     let regexForEmail=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
     let regexForPassword=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
+   if (firstname==""||lastname==""||email==""||password==""&&!regexForFirstName.test(firstname)||!regexForLastName.test(lastname)||!regexForEmail.test(email)||!regexForPassword.test(password)
+    ) {
+      if(firstname==""){
+        setfirstnameerror("please this field is required !!")
+      }else if(!regexForFirstName.test(firstname)){
+        setfirstnameerror("firstname must be at least 3 character !!") 
+      }else if(!firstname==""||regexForFirstName.test(firstname)){
+        setfirstnameerror("")
+      }
+      if(lastname==""){
+        setlastnameerror("please this field is required !!")
+      }else if(!regexForLastName.test(lastname)){
+        setlastnameerror("lastname must be at least 3 character !!") 
+      }else if(!lastname==""||regexForLastName.test(firstname)){
+        setlastnameerror("")
+      }
+      if(email==""){
+        setemailerror("please this field is required !!")
+      }else if(!regexForEmail.test(email)){
+        setemailerror("please enter a correct email format !!") 
+      }else if(!email==""||regexForEmail.test(email)){
+        setemailerror("")
+      }
+      if(password==""){
+        setpassworderror("please this field is required !!")
+      }else if(!regexForPassword.test(password)){
+        setpassworderror("password must contain uppercase,lowercase and numbers !!") 
+      }else if(!password==""||regexForPassword.test(password)){
+        setpassworderror("")
+      }
+   }
+    else{
+      alert("correct login")
+    }
   }
   return (
     <>
