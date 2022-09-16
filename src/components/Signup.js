@@ -12,6 +12,7 @@ const Signup = () => {
   const [lastnameerror, setlastnameerror] = useState("");
   const [emailerror, setemailerror] = useState("");
   const [passworderror, setpassworderror] = useState("");
+  const endPoints="https://localhost:"
   const signup =()=>{
     let regexForFirstName=/^[\w]{3,}$/
     let regexForLastName=/^[\w]{3,}$/
