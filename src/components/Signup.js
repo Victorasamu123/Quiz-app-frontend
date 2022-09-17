@@ -12,7 +12,8 @@ const Signup = () => {
   const [lastnameerror, setlastnameerror] = useState("");
   const [emailerror, setemailerror] = useState("");
   const [passworderror, setpassworderror] = useState("");
-  const endPoints="https://localhost:"
+  const endPoints="http://localhost:2500/auth/signup"
+  const endPoints2="http://localhost:2500/auth/email"
   const signup =()=>{
     let regexForFirstName=/^[\w]{3,}$/
     let regexForLastName=/^[\w]{3,}$/
@@ -50,6 +51,20 @@ const Signup = () => {
       }
    }
     else{
+      setfirstnameerror("")
+      setlastnameerror("")
+      setemailerror("")
+      setpassworderror("")
+      let signUpObj={firstname,lastname,email,password}
+      axios.post(endPoints,signUpObj).then((result)=>{
+        console.log(result)
+      }).catch((err)=>{
+        console.log(err)
+      });
+      let mailerObj={email,firstname,lastname}
+      axios.post(endPoints2,mailerObj).then((result)=>{
+        console.log(result)
+      })
       alert("correct login")
     }
   }

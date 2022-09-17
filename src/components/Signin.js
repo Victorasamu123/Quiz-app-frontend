@@ -9,6 +9,7 @@ const Signin = () => {
   const [password, setpassword] = useState("");
   const [emailerror, setemailerror] = useState("");
   const [passworderror, setpassworderror] = useState("");
+  const endPoints="http://localhost:2500/auth/signin"
   const signin=()=>{
     let regexForEmail=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
     let regexForPassword=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
@@ -32,6 +33,12 @@ const Signin = () => {
     else{
       setemailerror("")
       setpassworderror("")
+      let signInObj={email,password}
+      axios.post(endPoints,signInObj).then((result)=>{
+        console.log(result)
+      }).catch((err)=>{
+        console.log(err)
+      });
       alert("correct login")
     }
   }
