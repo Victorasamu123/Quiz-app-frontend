@@ -55,7 +55,7 @@ const Signup = () => {
       setlastnameerror("")
       setemailerror("")
       setpassworderror("")
-      let signUpObj={firstname,lastname,email,password}
+      let signUpObj={firstname,lastname,email,password,status:false}
       axios.post(endPoints,signUpObj).then((result)=>{
         console.log(result)
       }).catch((err)=>{

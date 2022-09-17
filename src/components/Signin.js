@@ -3,13 +3,14 @@ import "../styles/Signup.css"
 import { useRef, useState } from 'react'
 import axios from "axios"
 import icon1 from "../images/Dribbble (3)_1.jpg"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 const Signin = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
   const [emailerror, setemailerror] = useState("");
   const [passworderror, setpassworderror] = useState("");
   const endPoints="http://localhost:2500/auth/signin"
+  let navigate=useNavigate()
   const signin=()=>{
     let regexForEmail=/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/
     let regexForPassword=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/
@@ -36,10 +37,18 @@ const Signin = () => {
       let signInObj={email,password}
       axios.post(endPoints,signInObj).then((result)=>{
         console.log(result)
+        if(result.data.status==false){
+          alert("pele oo")
+        }else{
+          if(result.data.statuss==true){
+            navigate("/admindashboard")
+          }else{
+            navigate("/userdashboard")
+          }
+        }
       }).catch((err)=>{
         console.log(err)
       });
-      alert("correct login")
     }
   }
   return (
