@@ -85,7 +85,7 @@ const Signup = () => {
             <div className='text-danger'>{passworderror}</div>
             </div>
             <div id="warning"></div>
-            <button  className="sign-in-button" onClick={signup}>sign up</button>
+            <button  className="sign-in-button" onClick={signup}>sign up</button><Link to="/signin" className='link'>Log in</Link>
             <div className="confirmation">
                 Already have an account?<Link to="/signin" className='link'>Log in</Link>
             </div>

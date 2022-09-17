@@ -4,6 +4,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Signup from './components/Signup';
 import Signin from './components/Signin';
+import AdminDashboard from './components/AdminDashboard';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route  path='/' element={<Signup/>}/>
         <Route  path='/signin' element={<Signin/>}/>
+        <Route  path='/admindashboard' element={<AdminDashboard/>}/>
       </Routes>
     </>
   );
